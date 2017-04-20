@@ -20,6 +20,7 @@
 		ED64EB381EA866310061C790 /* PPTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB371EA866310061C790 /* PPTextFieldViewController.m */; };
 		ED64EB3B1EA8687F0061C790 /* PPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB3A1EA8687F0061C790 /* PPTableViewCell.m */; };
 		ED64EB461EA89D060061C790 /* PPKeyboardActor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB451EA89D060061C790 /* PPKeyboardActor.m */; };
+		ED64EB4C1EA8A7750061C790 /* PPTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB4B1EA8A7750061C790 /* PPTextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		ED64EB3C1EA87AB90061C790 /* PPViewInitialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPViewInitialize.h; sourceTree = "<group>"; };
 		ED64EB441EA89D060061C790 /* PPKeyboardActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPKeyboardActor.h; sourceTree = "<group>"; };
 		ED64EB451EA89D060061C790 /* PPKeyboardActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPKeyboardActor.m; sourceTree = "<group>"; };
+		ED64EB4A1EA8A7750061C790 /* PPTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTextViewController.h; sourceTree = "<group>"; };
+		ED64EB4B1EA8A7750061C790 /* PPTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 				ED64EB071EA860A00061C790 /* ViewController.m */,
 				ED64EB361EA866310061C790 /* PPTextFieldViewController.h */,
 				ED64EB371EA866310061C790 /* PPTextFieldViewController.m */,
+				ED64EB4A1EA8A7750061C790 /* PPTextViewController.h */,
+				ED64EB4B1EA8A7750061C790 /* PPTextViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				ED64EB051EA860A00061C790 /* AppDelegate.m in Sources */,
 				ED64EB381EA866310061C790 /* PPTextFieldViewController.m in Sources */,
 				ED64EB3B1EA8687F0061C790 /* PPTableViewCell.m in Sources */,
+				ED64EB4C1EA8A7750061C790 /* PPTextViewController.m in Sources */,
 				ED64EB021EA860A00061C790 /* main.m in Sources */,
 				ED64EB351EA8653E0061C790 /* PPBasicViewController.m in Sources */,
 			);

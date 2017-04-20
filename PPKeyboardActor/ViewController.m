@@ -9,10 +9,12 @@
 #import "ViewController.h"
 #import <Masonry/Masonry.h>
 #import "PPTextFieldViewController.h"
+#import "PPTextViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *mainTableView;
 @property (nonatomic, strong) UITableViewCell *chartCell;
+@property (nonatomic, strong) UITableViewCell *textViewCell;
 @end
 
 @implementation ViewController
@@ -31,6 +33,9 @@
     if (indexPath.row == 0 ) {
         PPTextFieldViewController *textVc = [[PPTextFieldViewController alloc]init];
         [self.navigationController pushViewController:textVc animated:YES];
+    }else if (indexPath.row == 1){
+        PPTextViewController *textVc = [[PPTextViewController alloc]init];
+        [self.navigationController pushViewController:textVc animated:YES];
     }
 }
 #pragma mark - UITableViewDataSource
@@ -38,7 +43,7 @@
     return 1;
 }
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -47,7 +52,9 @@
         case 0:
             cell = self.chartCell;
             break;
-            
+        case 1:
+            cell = self.textViewCell;
+            break;
         default:
             break;
     }
@@ -70,6 +77,13 @@
         [_chartCell.textLabel setText:@"测试UITextField弹起"];
     }
     return _chartCell;
+}
+- (UITableViewCell *)textViewCell{
+    if (!_textViewCell) {
+        _textViewCell = [[UITableViewCell alloc]init];
+        [_textViewCell.textLabel setText:@"测试UITextView弹起"];
+    }
+    return _textViewCell;
 }
 
 @end

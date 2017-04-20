@@ -54,6 +54,10 @@
                     [UIView animateWithDuration:duration animations:^{
                         [_actorView setTransform:CGAffineTransformMakeTranslation(0, -offsetY)];
                     }];
+                }else {
+                    [UIView animateWithDuration:duration animations:^{
+                        [_actorView setTransform:CGAffineTransformIdentity];
+                    }];
                 }
             }else
             {
@@ -73,6 +77,10 @@
                 [UIView animateWithDuration:duration animations:^{
                     [_actorView setTransform:CGAffineTransformMakeTranslation(0, -offsetY)];
                 }];
+            }else {
+                [UIView animateWithDuration:duration animations:^{
+                    [_actorView setTransform:CGAffineTransformIdentity];
+                }];
             }
         }else
         {
@@ -80,10 +88,14 @@
         }
         }else {
             CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - CGRectGetMaxY(firstResponder.frame);
-            if (responderSpaceKeyboard < firstResponder.frame.size.height + 10) {
+            if (responderSpaceKeyboard < 50) {
                 CGFloat offsetY = ABS(responderSpaceKeyboard) + 80.0;
                 [UIView animateWithDuration:duration animations:^{
                     [_actorView setTransform:CGAffineTransformMakeTranslation(0, -offsetY)];
+                }];
+            }else {
+                [UIView animateWithDuration:duration animations:^{
+                    [_actorView setTransform:CGAffineTransformIdentity];
                 }];
             }
             
