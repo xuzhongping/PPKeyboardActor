@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29A9F3DB3654727EF122CB29 /* libPods-PPKeyboardActor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDF89DB4842C068E19D8EB6 /* libPods-PPKeyboardActor.a */; };
+		ED64EB021EA860A00061C790 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB011EA860A00061C790 /* main.m */; };
+		ED64EB051EA860A00061C790 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB041EA860A00061C790 /* AppDelegate.m */; };
+		ED64EB081EA860A00061C790 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB071EA860A00061C790 /* ViewController.m */; };
+		ED64EB0B1EA860A00061C790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED64EB091EA860A00061C790 /* Main.storyboard */; };
+		ED64EB0D1EA860A00061C790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED64EB0C1EA860A00061C790 /* Assets.xcassets */; };
+		ED64EB101EA860A00061C790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED64EB0E1EA860A00061C790 /* LaunchScreen.storyboard */; };
+		ED64EB1B1EA860A00061C790 /* PPKeyboardActorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB1A1EA860A00061C790 /* PPKeyboardActorTests.m */; };
+		ED64EB261EA860A00061C790 /* PPKeyboardActorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB251EA860A00061C790 /* PPKeyboardActorUITests.m */; };
+		ED64EB351EA8653E0061C790 /* PPBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB341EA8653E0061C790 /* PPBasicViewController.m */; };
+		ED64EB381EA866310061C790 /* PPTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB371EA866310061C790 /* PPTextFieldViewController.m */; };
+		ED64EB3B1EA8687F0061C790 /* PPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB3A1EA8687F0061C790 /* PPTableViewCell.m */; };
+		ED64EB461EA89D060061C790 /* PPKeyboardActor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB451EA89D060061C790 /* PPKeyboardActor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED64EB171EA860A00061C790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED64EAF51EA860A00061C790 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED64EAFC1EA860A00061C790;
+			remoteInfo = PPKeyboardActor;
+		};
+		ED64EB221EA860A00061C790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED64EAF51EA860A00061C790 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED64EAFC1EA860A00061C790;
+			remoteInfo = PPKeyboardActor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F1C84ABA98A8AC0F77A3355 /* Pods-PPKeyboardActor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPKeyboardActor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPKeyboardActor/Pods-PPKeyboardActor.debug.xcconfig"; sourceTree = "<group>"; };
+		5CDF89DB4842C068E19D8EB6 /* libPods-PPKeyboardActor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PPKeyboardActor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC1796227319D627AA995F6 /* Pods-PPKeyboardActor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPKeyboardActor.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPKeyboardActor/Pods-PPKeyboardActor.release.xcconfig"; sourceTree = "<group>"; };
+		ED64EAFD1EA860A00061C790 /* PPKeyboardActor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPKeyboardActor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED64EB011EA860A00061C790 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED64EB031EA860A00061C790 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED64EB041EA860A00061C790 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED64EB061EA860A00061C790 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ED64EB071EA860A00061C790 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ED64EB0A1EA860A00061C790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED64EB0C1EA860A00061C790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED64EB0F1EA860A00061C790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED64EB111EA860A00061C790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED64EB161EA860A00061C790 /* PPKeyboardActorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PPKeyboardActorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED64EB1A1EA860A00061C790 /* PPKeyboardActorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPKeyboardActorTests.m; sourceTree = "<group>"; };
+		ED64EB1C1EA860A00061C790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED64EB211EA860A00061C790 /* PPKeyboardActorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PPKeyboardActorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED64EB251EA860A00061C790 /* PPKeyboardActorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPKeyboardActorUITests.m; sourceTree = "<group>"; };
+		ED64EB271EA860A00061C790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED64EB331EA8653E0061C790 /* PPBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBasicViewController.h; sourceTree = "<group>"; };
+		ED64EB341EA8653E0061C790 /* PPBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBasicViewController.m; sourceTree = "<group>"; };
+		ED64EB361EA866310061C790 /* PPTextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTextFieldViewController.h; sourceTree = "<group>"; };
+		ED64EB371EA866310061C790 /* PPTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTextFieldViewController.m; sourceTree = "<group>"; };
+		ED64EB391EA8687F0061C790 /* PPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTableViewCell.h; sourceTree = "<group>"; };
+		ED64EB3A1EA8687F0061C790 /* PPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTableViewCell.m; sourceTree = "<group>"; };
+		ED64EB3C1EA87AB90061C790 /* PPViewInitialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPViewInitialize.h; sourceTree = "<group>"; };
+		ED64EB441EA89D060061C790 /* PPKeyboardActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPKeyboardActor.h; sourceTree = "<group>"; };
+		ED64EB451EA89D060061C790 /* PPKeyboardActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPKeyboardActor.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED64EAFA1EA860A00061C790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A9F3DB3654727EF122CB29 /* libPods-PPKeyboardActor.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED64EB131EA860A00061C790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED64EB1E1EA860A00061C790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EF787EF888AA2003128C48B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CDF89DB4842C068E19D8EB6 /* libPods-PPKeyboardActor.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED64EAF41EA860A00061C790 = {
+			isa = PBXGroup;
+			children = (
+				ED64EAFF1EA860A00061C790 /* PPKeyboardActor */,
+				ED64EB191EA860A00061C790 /* PPKeyboardActorTests */,
+				ED64EB241EA860A00061C790 /* PPKeyboardActorUITests */,
+				ED64EAFE1EA860A00061C790 /* Products */,
+				F666153F55C36D01763DAEB1 /* Pods */,
+				2EF787EF888AA2003128C48B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ED64EAFE1EA860A00061C790 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED64EAFD1EA860A00061C790 /* PPKeyboardActor.app */,
+				ED64EB161EA860A00061C790 /* PPKeyboardActorTests.xctest */,
+				ED64EB211EA860A00061C790 /* PPKeyboardActorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED64EAFF1EA860A00061C790 /* PPKeyboardActor */ = {
+			isa = PBXGroup;
+			children = (
+				ED64EB491EA89E220061C790 /* Protocol */,
+				ED64EB481EA89E170061C790 /* View */,
+				ED64EB471EA89E070061C790 /* Controller */,
+				ED64EB431EA89D060061C790 /* PPKeyboardActor */,
+				ED64EB031EA860A00061C790 /* AppDelegate.h */,
+				ED64EB041EA860A00061C790 /* AppDelegate.m */,
+				ED64EB091EA860A00061C790 /* Main.storyboard */,
+				ED64EB0C1EA860A00061C790 /* Assets.xcassets */,
+				ED64EB0E1EA860A00061C790 /* LaunchScreen.storyboard */,
+				ED64EB111EA860A00061C790 /* Info.plist */,
+				ED64EB001EA860A00061C790 /* Supporting Files */,
+			);
+			path = PPKeyboardActor;
+			sourceTree = "<group>";
+		};
+		ED64EB001EA860A00061C790 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED64EB011EA860A00061C790 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED64EB191EA860A00061C790 /* PPKeyboardActorTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED64EB1A1EA860A00061C790 /* PPKeyboardActorTests.m */,
+				ED64EB1C1EA860A00061C790 /* Info.plist */,
+			);
+			path = PPKeyboardActorTests;
+			sourceTree = "<group>";
+		};
+		ED64EB241EA860A00061C790 /* PPKeyboardActorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED64EB251EA860A00061C790 /* PPKeyboardActorUITests.m */,
+				ED64EB271EA860A00061C790 /* Info.plist */,
+			);
+			path = PPKeyboardActorUITests;
+			sourceTree = "<group>";
+		};
+		ED64EB431EA89D060061C790 /* PPKeyboardActor */ = {
+			isa = PBXGroup;
+			children = (
+				ED64EB441EA89D060061C790 /* PPKeyboardActor.h */,
+				ED64EB451EA89D060061C790 /* PPKeyboardActor.m */,
+			);
+			path = PPKeyboardActor;
+			sourceTree = "<group>";
+		};
+		ED64EB471EA89E070061C790 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED64EB331EA8653E0061C790 /* PPBasicViewController.h */,
+				ED64EB341EA8653E0061C790 /* PPBasicViewController.m */,
+				ED64EB061EA860A00061C790 /* ViewController.h */,
+				ED64EB071EA860A00061C790 /* ViewController.m */,
+				ED64EB361EA866310061C790 /* PPTextFieldViewController.h */,
+				ED64EB371EA866310061C790 /* PPTextFieldViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ED64EB481EA89E170061C790 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED64EB391EA8687F0061C790 /* PPTableViewCell.h */,
+				ED64EB3A1EA8687F0061C790 /* PPTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		ED64EB491EA89E220061C790 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				ED64EB3C1EA87AB90061C790 /* PPViewInitialize.h */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		F666153F55C36D01763DAEB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F1C84ABA98A8AC0F77A3355 /* Pods-PPKeyboardActor.debug.xcconfig */,
+				CCC1796227319D627AA995F6 /* Pods-PPKeyboardActor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED64EAFC1EA860A00061C790 /* PPKeyboardActor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED64EB2A1EA860A00061C790 /* Build configuration list for PBXNativeTarget "PPKeyboardActor" */;
+			buildPhases = (
+				C711EA756E15B3187E1305CB /* [CP] Check Pods Manifest.lock */,
+				ED64EAF91EA860A00061C790 /* Sources */,
+				ED64EAFA1EA860A00061C790 /* Frameworks */,
+				ED64EAFB1EA860A00061C790 /* Resources */,
+				F285938CAA026C32BC27FB14 /* [CP] Embed Pods Frameworks */,
+				A0B5E1367903E435E5F22003 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PPKeyboardActor;
+			productName = PPKeyboardActor;
+			productReference = ED64EAFD1EA860A00061C790 /* PPKeyboardActor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED64EB151EA860A00061C790 /* PPKeyboardActorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED64EB2D1EA860A00061C790 /* Build configuration list for PBXNativeTarget "PPKeyboardActorTests" */;
+			buildPhases = (
+				ED64EB121EA860A00061C790 /* Sources */,
+				ED64EB131EA860A00061C790 /* Frameworks */,
+				ED64EB141EA860A00061C790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED64EB181EA860A00061C790 /* PBXTargetDependency */,
+			);
+			name = PPKeyboardActorTests;
+			productName = PPKeyboardActorTests;
+			productReference = ED64EB161EA860A00061C790 /* PPKeyboardActorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED64EB201EA860A00061C790 /* PPKeyboardActorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED64EB301EA860A00061C790 /* Build configuration list for PBXNativeTarget "PPKeyboardActorUITests" */;
+			buildPhases = (
+				ED64EB1D1EA860A00061C790 /* Sources */,
+				ED64EB1E1EA860A00061C790 /* Frameworks */,
+				ED64EB1F1EA860A00061C790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED64EB231EA860A00061C790 /* PBXTargetDependency */,
+			);
+			name = PPKeyboardActorUITests;
+			productName = PPKeyboardActorUITests;
+			productReference = ED64EB211EA860A00061C790 /* PPKeyboardActorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED64EAF51EA860A00061C790 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "徐仲平";
+				TargetAttributes = {
+					ED64EAFC1EA860A00061C790 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 94Z9LKE2W7;
+						ProvisioningStyle = Automatic;
+					};
+					ED64EB151EA860A00061C790 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 94Z9LKE2W7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED64EAFC1EA860A00061C790;
+					};
+					ED64EB201EA860A00061C790 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 94Z9LKE2W7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED64EAFC1EA860A00061C790;
+					};
+				};
+			};
+			buildConfigurationList = ED64EAF81EA860A00061C790 /* Build configuration list for PBXProject "PPKeyboardActor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED64EAF41EA860A00061C790;
+			productRefGroup = ED64EAFE1EA860A00061C790 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED64EAFC1EA860A00061C790 /* PPKeyboardActor */,
+				ED64EB151EA860A00061C790 /* PPKeyboardActorTests */,
+				ED64EB201EA860A00061C790 /* PPKeyboardActorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED64EAFB1EA860A00061C790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED64EB101EA860A00061C790 /* LaunchScreen.storyboard in Resources */,
+				ED64EB0D1EA860A00061C790 /* Assets.xcassets in Resources */,
+				ED64EB0B1EA860A00061C790 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED64EB141EA860A00061C790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED64EB1F1EA860A00061C790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0B5E1367903E435E5F22003 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PPKeyboardActor/Pods-PPKeyboardActor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C711EA756E15B3187E1305CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F285938CAA026C32BC27FB14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PPKeyboardActor/Pods-PPKeyboardActor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED64EAF91EA860A00061C790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED64EB081EA860A00061C790 /* ViewController.m in Sources */,
+				ED64EB461EA89D060061C790 /* PPKeyboardActor.m in Sources */,
+				ED64EB051EA860A00061C790 /* AppDelegate.m in Sources */,
+				ED64EB381EA866310061C790 /* PPTextFieldViewController.m in Sources */,
+				ED64EB3B1EA8687F0061C790 /* PPTableViewCell.m in Sources */,
+				ED64EB021EA860A00061C790 /* main.m in Sources */,
+				ED64EB351EA8653E0061C790 /* PPBasicViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED64EB121EA860A00061C790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED64EB1B1EA860A00061C790 /* PPKeyboardActorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED64EB1D1EA860A00061C790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED64EB261EA860A00061C790 /* PPKeyboardActorUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED64EB181EA860A00061C790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED64EAFC1EA860A00061C790 /* PPKeyboardActor */;
+			targetProxy = ED64EB171EA860A00061C790 /* PBXContainerItemProxy */;
+		};
+		ED64EB231EA860A00061C790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED64EAFC1EA860A00061C790 /* PPKeyboardActor */;
+			targetProxy = ED64EB221EA860A00061C790 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED64EB091EA860A00061C790 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED64EB0A1EA860A00061C790 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED64EB0E1EA860A00061C790 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED64EB0F1EA860A00061C790 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED64EB281EA860A00061C790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED64EB291EA860A00061C790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED64EB2B1EA860A00061C790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F1C84ABA98A8AC0F77A3355 /* Pods-PPKeyboardActor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = PPKeyboardActor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MiddleP.PPKeyboardActor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED64EB2C1EA860A00061C790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCC1796227319D627AA995F6 /* Pods-PPKeyboardActor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = PPKeyboardActor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MiddleP.PPKeyboardActor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ED64EB2E1EA860A00061C790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = PPKeyboardActorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MiddleP.PPKeyboardActorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PPKeyboardActor.app/PPKeyboardActor";
+			};
+			name = Debug;
+		};
+		ED64EB2F1EA860A00061C790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = PPKeyboardActorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MiddleP.PPKeyboardActorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PPKeyboardActor.app/PPKeyboardActor";
+			};
+			name = Release;
+		};
+		ED64EB311EA860A00061C790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = PPKeyboardActorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MiddleP.PPKeyboardActorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PPKeyboardActor;
+			};
+			name = Debug;
+		};
+		ED64EB321EA860A00061C790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = PPKeyboardActorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MiddleP.PPKeyboardActorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PPKeyboardActor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED64EAF81EA860A00061C790 /* Build configuration list for PBXProject "PPKeyboardActor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED64EB281EA860A00061C790 /* Debug */,
+				ED64EB291EA860A00061C790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED64EB2A1EA860A00061C790 /* Build configuration list for PBXNativeTarget "PPKeyboardActor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED64EB2B1EA860A00061C790 /* Debug */,
+				ED64EB2C1EA860A00061C790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED64EB2D1EA860A00061C790 /* Build configuration list for PBXNativeTarget "PPKeyboardActorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED64EB2E1EA860A00061C790 /* Debug */,
+				ED64EB2F1EA860A00061C790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED64EB301EA860A00061C790 /* Build configuration list for PBXNativeTarget "PPKeyboardActorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED64EB311EA860A00061C790 /* Debug */,
+				ED64EB321EA860A00061C790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED64EAF51EA860A00061C790 /* Project object */;
+}

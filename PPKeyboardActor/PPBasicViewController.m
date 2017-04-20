@@ -1,0 +1,22 @@
+//
+//  PPBasicViewController.m
+//  PPKeyboardActor
+//
+//  Created by 徐仲平 on 2017/4/20.
+//  Copyright © 2017年 徐仲平. All rights reserved.
+//
+
+#import "PPBasicViewController.h"
+
+@interface PPBasicViewController ()
+
+@end
+
+@implementation PPBasicViewController
+
+- (void)viewDidLoad{
+    [self addSubviews];
+    [self defineLayouts];
+}
+
+@end
