@@ -14,4 +14,6 @@
  ```
  使用时请将 PPKeyboardActor 实例定义为全局变量，以防被销毁.
  
+  ![Aaron Swartz](https://github.com/JungHsu/PPKeyboardActor/blob/master/PPKeyboardActor1.gif)
+ 
  > 如果在使用的时候出现问题与BUG，希望能及时反应，谢谢！
