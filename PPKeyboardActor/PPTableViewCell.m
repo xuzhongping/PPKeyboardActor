@@ -46,6 +46,10 @@
 - (void)bindStr:(NSString *)str{
     [self.sortNumLabel setText:str];
 }
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    [self.textField setText:NSStringFromCGRect(self.frame)];
+}
 
 #pragma mark - getter & setter methods
 - (UILabel *)sortNumLabel{

@@ -64,4 +64,7 @@
     }
     return _fieldTableView;
 }
+- (void)dealloc{
+    
+}
 @end

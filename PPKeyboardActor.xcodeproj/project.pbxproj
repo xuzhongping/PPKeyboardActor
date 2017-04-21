@@ -293,7 +293,7 @@
 				TargetAttributes = {
 					ED64EAFC1EA860A00061C790 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 94Z9LKE2W7;
+						DevelopmentTeam = XF6B8KU654;
 						ProvisioningStyle = Automatic;
 					};
 					ED64EB151EA860A00061C790 = {
@@ -565,10 +565,11 @@
 			baseConfigurationReference = 1F1C84ABA98A8AC0F77A3355 /* Pods-PPKeyboardActor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				DEVELOPMENT_TEAM = XF6B8KU654;
 				INFOPLIST_FILE = PPKeyboardActor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MiddleP.PPKeyboardActor;
+				PRODUCT_BUNDLE_IDENTIFIER = MiddleP.PPKeyboardActor1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -578,10 +579,11 @@
 			baseConfigurationReference = CCC1796227319D627AA995F6 /* Pods-PPKeyboardActor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				DEVELOPMENT_TEAM = XF6B8KU654;
 				INFOPLIST_FILE = PPKeyboardActor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MiddleP.PPKeyboardActor;
+				PRODUCT_BUNDLE_IDENTIFIER = MiddleP.PPKeyboardActor1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

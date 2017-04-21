@@ -25,101 +25,123 @@
 }
 
 - (void)acceptNotification{
+    __weak typeof(self) weakSelf = self;
     [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillHideNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         NSDictionary *info = [note userInfo];
         CGFloat duration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
         [UIView animateWithDuration:duration animations:^{
-            [_actorView setTransform:CGAffineTransformIdentity];
+            [strongSelf.actorView setTransform:CGAffineTransformIdentity];
         }];
     }];
     
+    
     [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillShowNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         NSDictionary *info = [note userInfo];
-        CGFloat duration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
-        CGRect endKeyboardRect = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
         
-        UIView *firstResponder = [self getFirstResponder];
-        UITableViewCell *tCell = [self getSourceTableViewCell:firstResponder];
-        UICollectionViewCell *cCell = [self getSourceCollectionViewCell:firstResponder];
-        if (tCell) {
-            id orginView = tCell.superview.superview;
-            if ([orginView isKindOfClass:[UITableView class]]) {
-                UITableView *tableView = orginView;
-                CGFloat responderForScreen = tCell.frame.origin.y + CGRectGetMaxY(firstResponder.frame) - tableView.contentOffset.y;
-                CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - responderForScreen;
-                 NSIndexPath *indexPath = [tableView indexPathForCell:tCell];
-                if (responderSpaceKeyboard < tCell.frame.size.height + 10) {
-                    CGFloat offsetY = ABS(responderSpaceKeyboard) + 80.0;
-                    [UIView animateWithDuration:duration animations:^{
-                        [_actorView setTransform:CGAffineTransformMakeTranslation(0, -offsetY)];
-                    }];
-                   
-                    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
-                }else {
-                    [UIView animateWithDuration:duration animations:^{
-                        [_actorView setTransform:CGAffineTransformIdentity];
-                    }];
-                    NSArray *visibleCells = tableView.visibleCells;
-                    UITableViewCell *cell = visibleCells.firstObject;
-                    NSIndexPath *visibleFirstIndexPath = [tableView indexPathForCell:cell];
-                    if (visibleFirstIndexPath.row != 0) {
-                        [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
-                    }
-                }
-            }else
-            {
-                return ;
-            }
+        UIView *firstResponder = [strongSelf getFirstResponder];
+        UITableViewCell *tCell = [strongSelf getSourceTableViewCell:firstResponder];
+        UICollectionViewCell *cCell = [strongSelf getSourceCollectionViewCell:firstResponder];
+        if (tCell) { // if the firstResponder In UITableViewCell
+            [strongSelf handleTableViewCellInput:info tableViewCell:tCell responder:firstResponder];
         }else
-            if (cCell){
-        id orginView = tCell.superview.superview;
-        if ([orginView isKindOfClass:[UICollectionView class]]) {
-            UICollectionView *collectionView = orginView;
-            CGFloat responderForScreen = tCell.frame.origin.y + CGRectGetMaxY(firstResponder.frame) - collectionView.contentOffset.y;
-            CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - responderForScreen;
-            NSIndexPath *indexPath = [collectionView indexPathForCell:cCell];
-            if (responderSpaceKeyboard < cCell.frame.size.height + 10) {
-                CGFloat offsetY = ABS(responderSpaceKeyboard) + 80.0;
-                [UIView animateWithDuration:duration animations:^{
-                    [_actorView setTransform:CGAffineTransformMakeTranslation(0, -offsetY)];
-                }];
-                [collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
-            }else {
-                
-                [UIView animateWithDuration:duration animations:^{
-                    [_actorView setTransform:CGAffineTransformIdentity];
-                }];
-                
-                NSArray *visibleCells = collectionView.visibleCells;
-                UICollectionViewCell *cell = visibleCells.firstObject;
-                NSIndexPath *visibleFirstIndexPath = [collectionView indexPathForCell:cell];
-                if (visibleFirstIndexPath.row != 0) {
-                    [collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
-            }
-                
-        }
-        }else
+        if (cCell){ // if the firstResponder In UICollectionView
+            [strongSelf handleCollectionViewCellInput:info collectionViewCell:cCell responder:firstResponder];
+        }else  // if the firstResponder In UIView
         {
-            return ;
-        }
-        }else {
-            CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - CGRectGetMaxY(firstResponder.frame);
-            if (responderSpaceKeyboard < 50) {
-                CGFloat offsetY = ABS(responderSpaceKeyboard) + 80.0;
-                [UIView animateWithDuration:duration animations:^{
-                    [_actorView setTransform:CGAffineTransformMakeTranslation(0, -offsetY)];
-                }];
-            }else {
-                [UIView animateWithDuration:duration animations:^{
-                    [_actorView setTransform:CGAffineTransformIdentity];
-                }];
-            }
-            
+            [strongSelf handleViewInput:info view:firstResponder];
         }
     }];
 }
 
+
+/**
+ handle keyboard mask inputView when UITableViewCell
+ */
+- (void)handleTableViewCellInput:(NSDictionary *)keyboardInfo tableViewCell:(UITableViewCell *)cell responder:(UIView *)responder{
+    __weak typeof(self) weakSelf = self;
+    CGFloat duration = [[keyboardInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    CGRect endKeyboardRect = [[keyboardInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    id orginView = cell.superview.superview;
+    if ([orginView isKindOfClass:[UITableView class]]) {
+        UITableView *tableView = orginView;
+        CGFloat responderForScreenY = CGRectGetMaxY(cell.frame) - tableView.contentOffset.y;
+        CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - responderForScreenY;
+        if (responderSpaceKeyboard < 1.0) {
+            CGFloat offsetY = ABS(responderSpaceKeyboard);
+            [UIView animateWithDuration:duration animations:^{
+             __strong typeof(weakSelf) strongSelf = weakSelf;
+                [strongSelf.actorView setTransform:CGAffineTransformMakeTranslation(0, -offsetY)];
+        }];
+        }else {
+            [UIView animateWithDuration:duration animations:^{
+                __strong typeof(weakSelf) strongSelf = weakSelf;
+                [strongSelf.actorView setTransform:CGAffineTransformIdentity];
+            }];
+        }
+    }else
+    {
+        return ;
+    }
+}
+
+/**
+ handle keyboard mask inputView when UICollectionViewCell
+ */
+- (void)handleCollectionViewCellInput:(NSDictionary *)keyboardInfo collectionViewCell:(UICollectionViewCell *)cell responder:(UIView *)responder{
+    __weak typeof(self) weakSelf = self;
+    CGFloat duration = [[keyboardInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    CGRect endKeyboardRect = [[keyboardInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    id orginView = cell.superview.superview;
+    if ([orginView isKindOfClass:[UICollectionView class]]) {
+        UICollectionView *collectionView = orginView;
+        CGFloat responderForScreen = CGRectGetMaxY(cell.frame) - collectionView.contentOffset.y;
+        CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - responderForScreen;
+        if (responderSpaceKeyboard < 1.0) {
+            CGFloat offsetY = ABS(responderSpaceKeyboard);
+            [UIView animateWithDuration:duration animations:^{
+                __strong typeof(weakSelf) strongSelf = weakSelf;
+                [strongSelf.actorView setTransform:CGAffineTransformMakeTranslation(0, -offsetY)];
+            }];
+        }else {
+            [UIView animateWithDuration:duration animations:^{
+                __strong typeof(weakSelf) strongSelf = weakSelf;
+                [strongSelf.actorView setTransform:CGAffineTransformIdentity];
+            }];
+        }
+    }else
+    {
+        return ;
+    }
+
+}
+
+/**
+ handle keyboard mask inputView when UIView
+ */
+- (void)handleViewInput:(NSDictionary *)keyboardInfo view:(UIView *)view{
+    __weak typeof(self) weakSelf = self;
+    CGFloat duration = [[keyboardInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    CGRect endKeyboardRect = [[keyboardInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat responderForScreen = CGRectGetMaxY(view.frame) - view.transform.ty;
+    CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - responderForScreen;
+    if (responderSpaceKeyboard < 1.0) {
+        CGFloat offsetY = ABS(responderSpaceKeyboard);
+        [UIView animateWithDuration:duration animations:^{
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            [strongSelf.actorView setTransform:CGAffineTransformMakeTranslation(0, -offsetY)];
+        }];
+    }else {
+        [UIView animateWithDuration:duration animations:^{
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            [strongSelf.actorView setTransform:CGAffineTransformIdentity];
+        }];
+    }
+}
+
 #pragma mark - Get
+
 
 - (UIView *)getFirstResponder{
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
@@ -149,5 +171,9 @@
         }
     }
     return nil;
+}
+
+- (void)dealloc{
+    
 }
 @end
