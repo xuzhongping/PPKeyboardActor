@@ -47,17 +47,24 @@
                 UITableView *tableView = orginView;
                 CGFloat responderForScreen = tCell.frame.origin.y + CGRectGetMaxY(firstResponder.frame) - tableView.contentOffset.y;
                 CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - responderForScreen;
+                 NSIndexPath *indexPath = [tableView indexPathForCell:tCell];
                 if (responderSpaceKeyboard < tCell.frame.size.height + 10) {
-                    NSIndexPath *indexPath = [tableView indexPathForCell:tCell];
-                    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
                     CGFloat offsetY = ABS(responderSpaceKeyboard) + 80.0;
                     [UIView animateWithDuration:duration animations:^{
                         [_actorView setTransform:CGAffineTransformMakeTranslation(0, -offsetY)];
                     }];
+                   
+                    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
                 }else {
                     [UIView animateWithDuration:duration animations:^{
                         [_actorView setTransform:CGAffineTransformIdentity];
                     }];
+                    NSArray *visibleCells = tableView.visibleCells;
+                    UITableViewCell *cell = visibleCells.firstObject;
+                    NSIndexPath *visibleFirstIndexPath = [tableView indexPathForCell:cell];
+                    if (visibleFirstIndexPath.row != 0) {
+                        [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+                    }
                 }
             }else
             {
@@ -70,18 +77,27 @@
             UICollectionView *collectionView = orginView;
             CGFloat responderForScreen = tCell.frame.origin.y + CGRectGetMaxY(firstResponder.frame) - collectionView.contentOffset.y;
             CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - responderForScreen;
+            NSIndexPath *indexPath = [collectionView indexPathForCell:cCell];
             if (responderSpaceKeyboard < cCell.frame.size.height + 10) {
-                NSIndexPath *indexPath = [collectionView indexPathForCell:cCell];
-                [collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
                 CGFloat offsetY = ABS(responderSpaceKeyboard) + 80.0;
                 [UIView animateWithDuration:duration animations:^{
                     [_actorView setTransform:CGAffineTransformMakeTranslation(0, -offsetY)];
                 }];
+                [collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
             }else {
+                
                 [UIView animateWithDuration:duration animations:^{
                     [_actorView setTransform:CGAffineTransformIdentity];
                 }];
+                
+                NSArray *visibleCells = collectionView.visibleCells;
+                UICollectionViewCell *cell = visibleCells.firstObject;
+                NSIndexPath *visibleFirstIndexPath = [collectionView indexPathForCell:cell];
+                if (visibleFirstIndexPath.row != 0) {
+                    [collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
             }
+                
+        }
         }else
         {
             return ;
