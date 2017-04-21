@@ -10,7 +10,7 @@
 #import <Masonry.h>
 #import "PPKeyboardActor.h"
 
-@interface PPTextViewController ()
+@interface PPTextViewController ()<UITextViewDelegate>
 @property (nonatomic, strong) UITextView *firstTextView;
 @property (nonatomic, strong) UITextView *secondTextView;
 @property (nonatomic, strong) PPKeyboardActor *actor;
@@ -38,11 +38,16 @@
     }];
 }
 
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 #pragma mark - getter & setter methods
 - (UITextView *)firstTextView{
     if (!_firstTextView) {
         _firstTextView = [[UITextView alloc]init];
         _firstTextView.backgroundColor = [UIColor redColor];
+        _firstTextView.delegate = self;
     }
     return _firstTextView;
 }
@@ -51,6 +56,7 @@
     if (!_secondTextView) {
         _secondTextView = [[UITextView alloc]init];
         _secondTextView.backgroundColor = [UIColor yellowColor];
+        _secondTextView.delegate = self;
     }
     return _secondTextView;
 }
