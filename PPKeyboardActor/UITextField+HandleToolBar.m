@@ -12,13 +12,13 @@
 
 @implementation UITextField (HandleToolBar)
 
-- (instancetype)init{
-    if (self = [super init]) {
-        [self handleTooBar];
-        [[PPInputViewSort defaultSort].inputViews addObject:self];
-    }
-    return self;
-}
+//- (instancetype)init{
+//    if (self = [super init]) {
+//        [self handleTooBar];
+//        [[PPInputViewSort defaultSort].inputViews addObject:self];
+//    }
+//    return self;
+//}
 - (void)handleTooBar{
     [self setInputAccessoryView:[self toolBar]];
 }

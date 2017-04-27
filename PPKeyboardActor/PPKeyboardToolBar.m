@@ -78,6 +78,7 @@
     }else {
         index += 1;
     }
+    [sourceTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
     UIView<UITextInput>* inputView = [PPInputViewSort defaultSort].inputViews[index];
     [responder resignFirstResponder];
     [inputView becomeFirstResponder];

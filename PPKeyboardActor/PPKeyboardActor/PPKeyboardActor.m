@@ -180,10 +180,6 @@
 }
 
 
-- (void)setScrollStyle:(PPInputViewScrollStyle)scrollStyle{
-    _scrollStyle = scrollStyle;
-    
-}
 
 
 @end
