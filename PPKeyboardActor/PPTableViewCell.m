@@ -8,6 +8,7 @@
 
 #import "PPTableViewCell.h"
 #import <Masonry/Masonry.h>
+#import "PPKeyboardToolBar.h"
 
 @interface PPTableViewCell ()
 @property (nonatomic, strong) UILabel *sortNumLabel;
@@ -62,6 +63,7 @@
     if (!_textField) {
         _textField = [[UITextField alloc]init];
         [_textField setPlaceholder:@"请输入"];
+
     }
     return _textField;
 }

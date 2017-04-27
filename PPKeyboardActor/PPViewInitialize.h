@@ -12,4 +12,5 @@
 
 - (void)addSubviews;
 - (void)defineLayouts;
+- (void)handleEvent;
 @end

@@ -13,6 +13,7 @@
 @interface PPTextViewController ()<UITextViewDelegate>
 @property (nonatomic, strong) UITextView *firstTextView;
 @property (nonatomic, strong) UITextView *secondTextView;
+@property (nonatomic, strong) UITextField *testField;
 @property (nonatomic, strong) PPKeyboardActor *actor;
 @end
 
@@ -22,6 +23,7 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:self.firstTextView];
     [self.view addSubview:self.secondTextView];
+    [self.secondTextView addSubview:self.testField];
     self.actor = [PPKeyboardActor keyboadWithActorView:self.view];
 }
 
@@ -35,6 +37,11 @@
         make.centerX.equalTo(self.view.mas_centerX);
         make.top.equalTo(self.firstTextView.mas_bottom).offset(30);
         make.size.mas_equalTo(CGSizeMake(300, 200));
+    }];
+    [self.testField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.secondTextView.mas_centerX);
+        make.centerY.equalTo(self.secondTextView.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(100, 40));
     }];
 }
 
@@ -59,5 +66,12 @@
         _secondTextView.delegate = self;
     }
     return _secondTextView;
+}
+- (UITextField *)testField{
+    if (!_testField) {
+        _testField = [[UITextField alloc]init];
+        _testField.backgroundColor = [UIColor blueColor];
+    }
+    return _testField;
 }
 @end

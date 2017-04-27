@@ -10,5 +10,6 @@
 #import "PPViewInitialize.h"
 
 @interface PPTableViewCell : UITableViewCell<PPViewInitialize>
+
 - (void)bindStr:(NSString *)str;
 @end

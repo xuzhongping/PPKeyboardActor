@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29A9F3DB3654727EF122CB29 /* libPods-PPKeyboardActor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDF89DB4842C068E19D8EB6 /* libPods-PPKeyboardActor.a */; };
+		ED222D931EAA0CB9004E0478 /* PPKeyboardToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ED222D921EAA0CB9004E0478 /* PPKeyboardToolBar.m */; };
 		ED64EB021EA860A00061C790 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB011EA860A00061C790 /* main.m */; };
 		ED64EB051EA860A00061C790 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB041EA860A00061C790 /* AppDelegate.m */; };
 		ED64EB081EA860A00061C790 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB071EA860A00061C790 /* ViewController.m */; };
@@ -21,6 +22,8 @@
 		ED64EB3B1EA8687F0061C790 /* PPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB3A1EA8687F0061C790 /* PPTableViewCell.m */; };
 		ED64EB461EA89D060061C790 /* PPKeyboardActor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB451EA89D060061C790 /* PPKeyboardActor.m */; };
 		ED64EB4C1EA8A7750061C790 /* PPTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64EB4B1EA8A7750061C790 /* PPTextViewController.m */; };
+		EDDBAFA01EB079AF008CB534 /* UITextField+HandleToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDBAF9F1EB079AF008CB534 /* UITextField+HandleToolBar.m */; };
+		EDDBAFA31EB09593008CB534 /* PPInputViewSort.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDBAFA21EB09593008CB534 /* PPInputViewSort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		1F1C84ABA98A8AC0F77A3355 /* Pods-PPKeyboardActor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPKeyboardActor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPKeyboardActor/Pods-PPKeyboardActor.debug.xcconfig"; sourceTree = "<group>"; };
 		5CDF89DB4842C068E19D8EB6 /* libPods-PPKeyboardActor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PPKeyboardActor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC1796227319D627AA995F6 /* Pods-PPKeyboardActor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPKeyboardActor.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPKeyboardActor/Pods-PPKeyboardActor.release.xcconfig"; sourceTree = "<group>"; };
+		ED222D911EAA0CB9004E0478 /* PPKeyboardToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPKeyboardToolBar.h; sourceTree = "<group>"; };
+		ED222D921EAA0CB9004E0478 /* PPKeyboardToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPKeyboardToolBar.m; sourceTree = "<group>"; };
 		ED64EAFD1EA860A00061C790 /* PPKeyboardActor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPKeyboardActor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED64EB011EA860A00061C790 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED64EB031EA860A00061C790 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +76,10 @@
 		ED64EB451EA89D060061C790 /* PPKeyboardActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPKeyboardActor.m; sourceTree = "<group>"; };
 		ED64EB4A1EA8A7750061C790 /* PPTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTextViewController.h; sourceTree = "<group>"; };
 		ED64EB4B1EA8A7750061C790 /* PPTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTextViewController.m; sourceTree = "<group>"; };
+		EDDBAF9E1EB079AF008CB534 /* UITextField+HandleToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+HandleToolBar.h"; sourceTree = "<group>"; };
+		EDDBAF9F1EB079AF008CB534 /* UITextField+HandleToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+HandleToolBar.m"; sourceTree = "<group>"; };
+		EDDBAFA11EB09593008CB534 /* PPInputViewSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPInputViewSort.h; sourceTree = "<group>"; };
+		EDDBAFA21EB09593008CB534 /* PPInputViewSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPInputViewSort.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +187,12 @@
 			children = (
 				ED64EB441EA89D060061C790 /* PPKeyboardActor.h */,
 				ED64EB451EA89D060061C790 /* PPKeyboardActor.m */,
+				ED222D911EAA0CB9004E0478 /* PPKeyboardToolBar.h */,
+				ED222D921EAA0CB9004E0478 /* PPKeyboardToolBar.m */,
+				EDDBAF9E1EB079AF008CB534 /* UITextField+HandleToolBar.h */,
+				EDDBAF9F1EB079AF008CB534 /* UITextField+HandleToolBar.m */,
+				EDDBAFA11EB09593008CB534 /* PPInputViewSort.h */,
+				EDDBAFA21EB09593008CB534 /* PPInputViewSort.m */,
 			);
 			path = PPKeyboardActor;
 			sourceTree = "<group>";
@@ -415,9 +430,12 @@
 				ED64EB051EA860A00061C790 /* AppDelegate.m in Sources */,
 				ED64EB381EA866310061C790 /* PPTextFieldViewController.m in Sources */,
 				ED64EB3B1EA8687F0061C790 /* PPTableViewCell.m in Sources */,
+				EDDBAFA31EB09593008CB534 /* PPInputViewSort.m in Sources */,
 				ED64EB4C1EA8A7750061C790 /* PPTextViewController.m in Sources */,
+				ED222D931EAA0CB9004E0478 /* PPKeyboardToolBar.m in Sources */,
 				ED64EB021EA860A00061C790 /* main.m in Sources */,
 				ED64EB351EA8653E0061C790 /* PPBasicViewController.m in Sources */,
+				EDDBAFA01EB079AF008CB534 /* UITextField+HandleToolBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

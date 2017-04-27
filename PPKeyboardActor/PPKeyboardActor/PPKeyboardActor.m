@@ -7,9 +7,11 @@
 //
 
 #import "PPKeyboardActor.h"
+#import <objc/message.h>
 
 @interface PPKeyboardActor ()
 @property (nonatomic, strong) UIView *actorView;
+
 @end
 @implementation PPKeyboardActor
 + (instancetype)keyboadWithActorView:(UIView *)actorView{
@@ -66,7 +68,8 @@
     id orginView = cell.superview.superview;
     if ([orginView isKindOfClass:[UITableView class]]) {
         UITableView *tableView = orginView;
-        CGFloat responderForScreenY = CGRectGetMaxY(cell.frame) - tableView.contentOffset.y;
+        CGFloat tableY = [tableView convertRect:tableView.bounds toView:[UIApplication sharedApplication].keyWindow].origin.y;
+        CGFloat responderForScreenY = CGRectGetMaxY(cell.frame) - tableView.contentOffset.y + tableY;
         CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - responderForScreenY;
         if (responderSpaceKeyboard < 1.0) {
             CGFloat offsetY = ABS(responderSpaceKeyboard);
@@ -96,7 +99,8 @@
     id orginView = cell.superview.superview;
     if ([orginView isKindOfClass:[UICollectionView class]]) {
         UICollectionView *collectionView = orginView;
-        CGFloat responderForScreen = CGRectGetMaxY(cell.frame) - collectionView.contentOffset.y;
+        CGFloat collectionY = [collectionView convertRect:collectionView.bounds toView:[UIApplication sharedApplication].keyWindow].origin.y;
+        CGFloat responderForScreen = CGRectGetMaxY(cell.frame) - collectionView.contentOffset.y + collectionY;
         CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - responderForScreen;
         if (responderSpaceKeyboard < 1.0) {
             CGFloat offsetY = ABS(responderSpaceKeyboard);
@@ -124,7 +128,7 @@
     __weak typeof(self) weakSelf = self;
     CGFloat duration = [[keyboardInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
     CGRect endKeyboardRect = [[keyboardInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    CGFloat responderForScreen = CGRectGetMaxY(view.frame) - view.transform.ty;
+    CGFloat responderForScreen = [view convertRect:view.frame toView:[UIApplication sharedApplication].keyWindow].origin.y - view.frame.size.height;
     CGFloat responderSpaceKeyboard = endKeyboardRect.origin.y - responderForScreen;
     if (responderSpaceKeyboard < 1.0) {
         CGFloat offsetY = ABS(responderSpaceKeyboard);
@@ -140,7 +144,9 @@
     }
 }
 
-#pragma mark - Get
+
+#pragma mark - Get && Set
+
 
 
 - (UIView *)getFirstResponder{
@@ -173,7 +179,11 @@
     return nil;
 }
 
-- (void)dealloc{
+
+- (void)setScrollStyle:(PPInputViewScrollStyle)scrollStyle{
+    _scrollStyle = scrollStyle;
     
 }
+
+
 @end
