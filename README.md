@@ -12,7 +12,7 @@
     self.actor = [PPKeyboardActor keyboadWithActorView:self.view];
 
  ```
- 使用时请将 PPKeyboardActor 实例定义为全局变量，以防被销毁.
+ 使用时请将 PPKeyboardActor 实例定义为强引用，以防被销毁.
  
   ![Aaron Swartz](https://github.com/JungHsu/PPKeyboardActor/blob/master/PPKeyboardActor1.gif)
  
