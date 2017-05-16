@@ -151,7 +151,11 @@
 
 - (UIView *)getFirstResponder{
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
-    UIView *firstResponder = [keyWindow performSelector:@selector(firstResponder)];
+    SEL firstResponderSelector = NSSelectorFromString(@"firstResponder");
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    UIView *firstResponder = [keyWindow performSelector:firstResponderSelector];
+#pragma clang diagnostic pop
     return firstResponder;
 }
 - (UITableViewCell *)getSourceTableViewCell:(UIView *)view{
