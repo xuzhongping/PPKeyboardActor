@@ -45,12 +45,12 @@
         UIView *firstResponder = [strongSelf getFirstResponder];
         UITableViewCell *tCell = [strongSelf getSourceTableViewCell:firstResponder];
         UICollectionViewCell *cCell = [strongSelf getSourceCollectionViewCell:firstResponder];
-        if (tCell) { // if the firstResponder In UITableViewCell
+        if (tCell) { // if the firstResponder in the UITableViewCell
             [strongSelf handleTableViewCellInput:info tableViewCell:tCell responder:firstResponder];
         }else
-        if (cCell){ // if the firstResponder In UICollectionView
+        if (cCell){ // if the firstResponder in the UICollectionView
             [strongSelf handleCollectionViewCellInput:info collectionViewCell:cCell responder:firstResponder];
-        }else  // if the firstResponder In UIView
+        }else  // if the firstResponder in the UIView
         {
             [strongSelf handleViewInput:info view:firstResponder];
         }
@@ -182,8 +182,6 @@
     }
     return nil;
 }
-
-
 
 
 @end
